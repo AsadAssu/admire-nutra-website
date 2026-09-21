@@ -17,7 +17,7 @@ export const capabilities = [
   { title: 'R&D Center', text: 'Custom formulations developed for taste, stability, efficacy and market positioning.', image: '/Reverse Engineering.jpeg', icon: FlaskConical },
   { title: 'Sustainable Manufacturing', text: 'Thoughtful sourcing and packaging choices designed to reduce environmental impact.', image: '/Sustainable Packaging.jpeg', icon: Leaf },
   { title: 'R&D Driven Product Excellence', text: 'Science-led development supported by ingredient and finished-product testing.', image: '/Future of Whey.jpeg', icon: Microscope },
-  { title: 'Trusted Industry Leaders', text: 'Confidential manufacturing support with transparent communication at every stage.', image: '/Leader-men1.png', icon: BadgeCheck },
+  { title: 'Trusted Industry Leaders', text: 'Confidential manufacturing support with transparent communication at every stage.', image: '/trusted-leader.png', icon: BadgeCheck },
   { title: 'Certification & Compliance', text: 'Documented systems aligned with GMP, ISO, HACCP, FSSAI and FDA requirements.', image: '/Iso-certificates-logo.png', icon: ShieldCheck },
   { title: 'Clean & Secure Approach', text: 'Controlled production, traceable materials and quality checks for every batch.', image: '/Plant Based.webp', icon: ClipboardCheck },
   { title: 'Global Reach', text: 'Export-ready documentation, flexible packaging and dependable logistics support.', image: '/Scaling MOQs.jpeg', icon: PackageCheck },
@@ -74,7 +74,6 @@ export const faqs = [
   ['Do you provide packaging and label support?', 'Yes. We support container selection, packaging design coordination, compliant label review and finished-product packing.'],
   ['How do I request pricing or samples?', 'Use the enquiry form below with your requirements. Our team will contact you with the next steps.'],
 ];
-
 
 export const certificationHighlights = [
   { title: 'WHO-GMP Certified Facility', certificate: '/certificates/ADMIRE NUTRA GMP FINAL.pdf' },

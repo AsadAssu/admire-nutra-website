@@ -100,18 +100,18 @@ const AboutPage = () => {
   };
 
   const stats = [
-    { label: "Manufacturing Area", value: "50,000", suffix: "SQFT", icon: <Factory /> },
-    { label: "Skilled Experts", value: "200", suffix: "+", icon: <Users /> },
-    { label: "Daily Capacity", value: "10,000", suffix: "+ Units", icon: <Zap /> },
+    { label: "Manufacturing Area", value: "2,000", suffix: "SQFT", icon: <Factory /> },
+    { label: "Skilled Experts", value: "100", suffix: "+", icon: <Users /> },
+    { label: "Daily Capacity", value: "1,000", suffix: "+ Units", icon: <Zap /> },
     { label: "Quality Focus", value: "100", suffix: "%", icon: <Award /> },
   ];
 
   const timelineMilestones = [
     { year: "2018", title: "Company Inception", desc: "Founded with a mission to deliver uncompromising supplement purity and build a world-class contract manufacturing ecosystem." },
-    { year: "2020", title: "Facility Blueprint", desc: "Constructed our flagship cGMP plant in Mohali with 25,000 SQFT of optimized production space and dedicated HVAC systems." },
+    { year: "2020", title: "Facility Blueprint", desc: "Constructed our flagship cGMP plant in Mohali with optimized production space and dedicated HVAC systems." },
     { year: "2022", title: "Certification Mastery", desc: "Achieved FSSAI, ISO 9001:2015, and WHO-GMP certifications." },
-    { year: "2024", title: "R&D Lab Launch", desc: "Inaugurated our advanced flavor profile laboratory led by PhD biochemists, revolutionizing taste systems in active nutrition." },
-    { year: "2026", title: "Digital Traceability & Expansion", desc: "Expanded the facility to 50,000 SQFT, integrating fully digitalized batch tracking, high-speed rotary presses, and zero-loss packaging." }
+    { year: "2024", title: "R&D Lab Launch", desc: "Inaugurated our advanced flavor profile laboratory led by experts, revolutionizing taste systems in active nutrition." },
+    { year: "2026", title: "Digital Traceability & Expansion", desc: "Expanded the facility, integrating fully digitalized batch tracking, high-speed rotary presses, and zero-loss packaging." }
   ];
 
   const sourcingHighlights = [
@@ -119,12 +119,6 @@ const AboutPage = () => {
     { country: "Belgium & France", source: "Patented Micronutrients", desc: "Physiologically active vitamins and minerals with maximum bio-availability." },
     { country: "Brazil & India", source: "Organic Plant Isolates", desc: "Sustainably harvested non-GMO pea, brown rice, and botanical extracts." },
     { country: "Sweden", source: "Premium Natural Sweeteners", desc: "Zero-glycemic stevia and monk fruit blends engineered for smooth flavor delivery." }
-  ];
-
-  const scientificAdvisors = [
-    { name: "Dr. Riya Sharma", role: "Chief Formulator & PhD in Biochemistry", bio: "Over 18 years of experience pioneering peptide synthesis and clinical sports dietetics.", image: "https://images.unsplash.com/photo-1594824436998-d70d740c2105?q=80&w=400" },
-    { name: "Neha Gupta", role: "Lead Flavor Chemist & Sensory Specialist", bio: "Master of Food Science. Renowned for creating market-leading taste profiles for elite gym supplements.", image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=400" },
-    { name: "Dr. Ananya Sen", role: "Director of Regulatory Affairs", bio: "Specialist in international food safety standards (FDA, EFSA, FSSAI) ensuring 100% compliant documentation.", image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=400" }
   ];
 
   const machineryCapacities = [
@@ -210,12 +204,15 @@ const AboutPage = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="aspect-[4/5] rounded-xl overflow-hidden border border-slate-200 shadow-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800"
-                  alt="Factory"
-                  className="w-full h-full object-cover transition-transform duration-1000 hover:scale-110"
-                />
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden border border-primary/20 bg-gradient-to-br from-primary/10 via-white to-accent/10 shadow-2xl flex flex-col items-center justify-center p-10 text-center">
+                <div className="w-20 h-20 rounded-2xl bg-primary text-white flex items-center justify-center shadow-xl mb-6">
+                  <Factory size={36} />
+                </div>
+                <span className="text-xs font-black uppercase tracking-[0.3em] text-accent mb-2">Excellence in Production</span>
+                <h3 className="text-3xl font-black text-primary uppercase tracking-tight mb-4">Admire Nutra</h3>
+                <p className="text-xs font-bold text-dark/60 uppercase tracking-widest leading-relaxed max-w-xs">
+                  Advanced Contract Manufacturing Facility & Quality-Driven Processes
+                </p>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-2xl border border-slate-100 hidden md:block max-w-[240px]">
                 <ShieldCheck size={32} className="text-primary mb-4" />
@@ -252,7 +249,7 @@ const AboutPage = () => {
             ))}
           </div>
 
-          {/* NEW SECTION 1: Premium Sourcing Standards (Why Choose Us) */}
+          {/* Sourcing Standards Section */}
           <section className="mb-24 relative overflow-hidden">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-accent/5 rounded-full blur-[100px] pointer-events-none"></div>
             <div className="text-center mb-16">
@@ -316,7 +313,7 @@ const AboutPage = () => {
             </motion.div>
           </div>
 
-          {/* NEW SECTION 2: The Innovation Timeline (Timeline / Journey) */}
+          {/* Innovation Timeline Section */}
           <section className="mb-24 py-16 bg-white border border-slate-100 shadow-xl rounded-3xl p-8 md:p-16 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-[120px] rounded-full translate-x-1/3 -translate-y-1/2"></div>
             <div className="text-center mb-16 relative z-10">
@@ -339,7 +336,6 @@ const AboutPage = () => {
                   transition={{ delay: i * 0.1 }}
                   className="relative group"
                 >
-                  {/* Timeline Dot */}
                   <div className="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 rounded-xl bg-white border-4 border-slate-100 flex items-center justify-center group-hover:border-primary group-hover:scale-110 transition-all duration-300 shadow-md">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
                   </div>
@@ -351,42 +347,6 @@ const AboutPage = () => {
                   <p className="text-dark/50 text-sm font-medium leading-relaxed max-w-2xl">
                     {milestone.desc}
                   </p>
-                </motion.div>
-              ))}
-            </div>
-          </section>
-
-          {/* NEW SECTION 3: Scientific Advisory Board (Industry Expertise) */}
-          <section className="mb-24">
-            <div className="text-center mb-16">
-              <span className="text-accent font-black uppercase tracking-[0.4em] text-[12px] mb-4 block">Precision Formulation</span>
-              <h2 className="text-4xl sm:text-5xl font-black uppercase tracking-tighter mb-4 leading-none">
-                Scientific <span className="premium-gradient-text">Advisors</span>
-              </h2>
-              <p className="text-dark/40 font-bold uppercase tracking-widest text-xs max-w-xl mx-auto leading-relaxed">
-                The analytical minds, biochemists, and regulatory specialists ensuring world-class formulation integrity.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {scientificAdvisors.map((advisor, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300"
-                >
-                  <div className="aspect-[4/3] overflow-hidden relative">
-                    <img src={advisor.image} alt={advisor.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-                  <div className="p-6">
-                    <h4 className="text-lg font-black uppercase tracking-tight text-dark mb-1">{advisor.name}</h4>
-                    <span className="text-[10px] font-black text-primary uppercase tracking-widest mb-4 block">{advisor.role}</span>
-                    <p className="text-dark/50 text-xs font-semibold leading-relaxed">{advisor.bio}</p>
-                  </div>
                 </motion.div>
               ))}
             </div>
@@ -471,7 +431,7 @@ const AboutPage = () => {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: { opacity: 1, y: 0 } }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
                 className="bg-white rounded-xl border border-slate-100 shadow-lg overflow-hidden"
@@ -510,7 +470,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* NEW SECTION 4: Machinery & Capacities (Service Highlights) */}
+      {/* Machinery & Capacities Section */}
       <section className="pb-24 px-4 sm:px-8">
         <div className="container-max">
           <div className="text-center mb-16">

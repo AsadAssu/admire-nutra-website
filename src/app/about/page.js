@@ -355,6 +355,44 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* Machinery & Capacities Section */}
+      <section className="pb-24 px-4 sm:px-8">
+        <div className="container-max">
+          <div className="text-center mb-16">
+            <span className="text-primary font-black uppercase tracking-[0.4em] text-[12px] mb-4 block">Automated Infrastructure</span>
+            <h2 className="text-4xl sm:text-5xl font-black uppercase tracking-tighter mb-4 leading-none">
+              Machinery & <span className="premium-gradient-text">Capacities</span>
+            </h2>
+            <p className="text-dark/40 font-bold uppercase tracking-widest text-xs max-w-xl mx-auto leading-relaxed">
+              Equipped with pharmaceutical-grade machinery lines engineered for continuous operation, absolute batch consistency, and high speed.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {machineryCapacities.map((machine, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white border border-slate-100 p-8 rounded-2xl shadow-lg relative overflow-hidden group hover:border-accent/30 transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 rounded-full translate-x-1/3 -translate-y-1/2 group-hover:scale-150 transition-transform duration-500"></div>
+                <div className="w-12 h-12 rounded-xl bg-accent/5 text-accent flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                  <Cpu size={24} />
+                </div>
+                <span className="text-2xl font-black tracking-tighter text-dark block mb-2">{machine.spec}</span>
+                <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">{machine.name}</h4>
+                <p className="text-dark/50 text-xs font-semibold leading-relaxed">
+                  {machine.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-12 px-4 sm:px-8">
         <div className="container-max bg-white rounded-xl p-8 md:p-12 border border-slate-100 shadow-2xl relative overflow-hidden text-center flex flex-col items-center">
@@ -376,8 +414,8 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-12 px-4 sm:px-8">
+      {/* FAQ Section (Now properly at the bottom) */}
+      <section className="py-12 px-4 sm:px-8 pb-24">
         <div className="container-max">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -393,7 +431,7 @@ const AboutPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid gap-4 max-w-5xl mx-auto mb-24">
+          <div className="grid gap-4 max-w-5xl mx-auto">
             {[
               {
                 question: "What types of supplements can you manufacture?",
@@ -431,7 +469,7 @@ const AboutPage = () => {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: { opacity: 1, y: 0 } }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
                 className="bg-white rounded-xl border border-slate-100 shadow-lg overflow-hidden"
@@ -464,44 +502,6 @@ const AboutPage = () => {
                     {faq.answer}
                   </p>
                 </motion.div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Machinery & Capacities Section */}
-      <section className="pb-24 px-4 sm:px-8">
-        <div className="container-max">
-          <div className="text-center mb-16">
-            <span className="text-primary font-black uppercase tracking-[0.4em] text-[12px] mb-4 block">Automated Infrastructure</span>
-            <h2 className="text-4xl sm:text-5xl font-black uppercase tracking-tighter mb-4 leading-none">
-              Machinery & <span className="premium-gradient-text">Capacities</span>
-            </h2>
-            <p className="text-dark/40 font-bold uppercase tracking-widest text-xs max-w-xl mx-auto leading-relaxed">
-              Equipped with pharmaceutical-grade machinery lines engineered for continuous operation, absolute batch consistency, and high speed.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {machineryCapacities.map((machine, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white border border-slate-100 p-8 rounded-2xl shadow-lg relative overflow-hidden group hover:border-accent/30 transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 rounded-full translate-x-1/3 -translate-y-1/2 group-hover:scale-150 transition-transform duration-500"></div>
-                <div className="w-12 h-12 rounded-xl bg-accent/5 text-accent flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-300">
-                  <Cpu size={24} />
-                </div>
-                <span className="text-2xl font-black tracking-tighter text-dark block mb-2">{machine.spec}</span>
-                <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">{machine.name}</h4>
-                <p className="text-dark/50 text-xs font-semibold leading-relaxed">
-                  {machine.desc}
-                </p>
               </motion.div>
             ))}
           </div>
